@@ -1,25 +1,25 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Link Generator</title>
+    <title>Random Image Generator</title>
 </head>
 <body>
-    <h1>Random Link Generator</h1>
-    <button onclick="generateRandomLink()">Generate Random Link</button>
-    <p id="random-link"></p>
+    <h1>Random Image Generator</h1>
+    <button onclick="generateRandomImage()">Generate Random Image</button>
+    <br><br>
+    <img id="random-image" src="" alt="Random Image" style="max-width: 100%; height: auto;">
 
     <script>
-        const links = [
-            "https://raw.githubusercontent.com/KaosSoMotTheGioi/random/main/image1.gif",
-            // Thêm các liên kết khác của bạn vào đây
+        const images = [
+            "https://raw.githubusercontent.com/KaosSoMotTheGioi/random/main/image1.gif"
+            // Thêm các liên kết hình ảnh khác của bạn vào đây
         ];
 
-        function generateRandomLink() {
-            const randomIndex = Math.floor(Math.random() * links.length);
-            const randomLink = links[randomIndex];
-            document.getElementById('random-link').innerHTML = `<a href="${randomLink}" target="_blank">${randomLink}</a>`;
+        function generateRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImage = images[randomIndex];
+            document.getElementById('random-image').src = randomImage;
         }
     </script>
 </body>

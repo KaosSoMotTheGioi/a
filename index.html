@@ -1,16 +1,13 @@
 const imagePaths = [
   "https://github.com/KaosSoMotTheGioi/random/blob/main/image1.gif?raw=true",
   "https://github.com/KaosSoMotTheGioi/random/blob/main/image2.gif?raw=true",
-"https://github.com/KaosSoMotTheGioi/random/blob/main/image3.gif?raw=true",
-  // ... thêm các đường dẫn khác vào đây
+
 ];
 
-// Hàm xuất ngẫu nhiên một đường dẫn
 function getRandomImagePath() {
   const randomIndex = Math.floor(Math.random() * imagePaths.length);
   return imagePaths[randomIndex];
 }
 
-// Sử dụng hàm để lấy đường dẫn ngẫu nhiên và gán cho thuộc tính src của thẻ img
 const randomImage = document.getElementById("yourImageId");
 randomImage.src = getRandomImagePath();
